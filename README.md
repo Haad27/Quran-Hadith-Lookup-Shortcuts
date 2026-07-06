@@ -6,16 +6,23 @@ Instead of opening websites, searching online, or copying and pasting references
 
 ## Examples
 
-| You Type | Automatically Becomes                                |
-| -------- | ---------------------------------------------------- |
-| `2:255;` | Qur'an 2:255 (Āyat al-Kursī)                         |
-| `112;`   | Surah Al-Ikhlāṣ                                      |
-| `m11;`   | Sahih Muslim 11 *(or the corresponding hadith text)* |
-| `als;`   | ﷺ                                                    |
-| `swt;`   | سُبْحَانَهُ وَتَعَالَى                               |
-| `ra;`    | رَضِيَ ٱللَّٰهُ عَنْهُ                               |
-| `raha;`  | رَحِمَهُ ٱللَّٰهُ                                    |
-| `as;`    | عَلَيْهِ ٱلسَّلَامُ                                  |
+| You Type | Automatically Becomes |
+| --- | --- |
+| `2:255;` | Qur'an 2:255 with Arabic text and English translation |
+| `33:23;` | Qur'an 33:23 with Arabic text and English translation |
+| `b102;` | Sahih al-Bukhari Hadith 102 with Arabic text and English translation |
+| `m45;` | Sahih Muslim Hadith 45 with Arabic text and English translation |
+| `ALLAH` + space | ALLAH ﷻ |
+| `love;` + space | Prophet Muhammad ﷺ |
+| `als` + space | عليه السلام |
+| `rs` + space | رضي الله عنه |
+| `aoa` + space | Assalamu Alaikum |
+| `bis` + space | بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ |
+| `jaz` + space | JazakAllahu Khayran |
+| `buk` + space | Sahih al-Bukhari |
+| `mus` + space | Sahih Muslim |
+| `abd` + space | Sunan Abi Dawud |
+| `tir` + space | Jami' at-Tirmidhi |
 
 The application works in almost every Windows application, including:
 
