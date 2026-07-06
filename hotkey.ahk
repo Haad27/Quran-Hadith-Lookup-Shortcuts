@@ -2,6 +2,9 @@
 #SingleInstance Force
 SendMode("Input")
 
+; Configuration: Set this to your online hosted URL (e.g. "https://your-app.onrender.com") when deploying.
+global API_URL := "http://127.0.0.1:8765"
+
 ; Automatically ensure the Flask server is running when this script starts.
 EnsureServerRunning()
 
@@ -77,7 +80,8 @@ ProcessLookup(book, query, matchLen) {
     ; Semicolon is already typed, so we need to backspace (matchLen + 1) characters
     backspaces := matchLen + 1
     
-    url := "http://127.0.0.1:8765/lookup?book=" book "&query=" query
+    global API_URL
+    url := API_URL "/lookup?book=" book "&query=" query
     
     try {
         req := ComObject("Msxml2.XMLHTTP")
@@ -104,9 +108,15 @@ ProcessLookup(book, query, matchLen) {
 }
 
 EnsureServerRunning() {
+    global API_URL
+    ; Only check/start local server if running locally
+    if (!InStr(API_URL, "127.0.0.1") && !InStr(API_URL, "localhost")) {
+        return
+    }
+    
     try {
         req := ComObject("Msxml2.XMLHTTP")
-        req.open("GET", "http://127.0.0.1:8765/ping", false)
+        req.open("GET", API_URL "/ping", false)
         req.send()
         if (req.status == 200) {
             return
