@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Shortcuts - Quran & Hadith Lookup</title>
+    <meta name="description" content="A fast, elegant desktop tool to look up Quranic verses and Hadiths from anywhere using simple keyboard shortcuts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <div class="badge">v1.0 Now Available</div>
+                <h1 class="title">Look up the Quran & Hadith <span class="highlight">Instantly</span></h1>
+                <p class="subtitle">Type a short reference anywhere on your desktop and instantly replace it with the beautiful Arabic text and English translation. No more switching tabs.</p>
+                
+                <div class="actions">
+                    <a href="/download" class="btn btn-primary" id="downloadBtn">
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </span>
+                        Download for Windows
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="glass-panel demo-panel">
+                    <div class="demo-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="demo-title">Any text editor, chat, or browser</div>
+                    </div>
+                    <div class="demo-body">
+                        <p class="typing-text">Did you read <span class="ref-text">quran 1:2</span> today?</p>
+                        <div class="translation-popup">
+                            <div class="popup-content">
+                                <p class="arabic-text">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ</p>
+                                <p class="english-text">[All] praise is [due] to Allah, Lord of the worlds -</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="features">
+            <h2 class="section-title">How it works</h2>
+            <div class="feature-grid">
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Quran Lookup</h3>
+                    <p>Type <code>quran 2:255</code> and press <strong>Alt + Q</strong> to instantly retrieve Ayatul Kursi.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Hadith Lookup</h3>
+                    <p>Type <code>bukhari 1</code> and press <strong>Alt + Q</strong> to insert the first Hadith from Sahih al-Bukhari.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Works Everywhere</h3>
+                    <p>Works natively in Word, Notepad, VS Code, Chrome, WhatsApp, Discord, and everywhere else!</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Islamic Shortcuts. Built with ❤️ for the Ummah.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple micro-animation on download click
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.addEventListener('click', function(e) {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 import os
 import sqlite3
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, send_from_directory
 
 app = Flask(__name__)
 DB_PATH = os.path.join("database", "texts.db")
@@ -9,6 +9,14 @@ def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/download")
+def download_exe():
+    return send_from_directory("downloads", "IslamicShortcuts.exe", as_attachment=True)
 
 @app.route("/ping")
 def ping():

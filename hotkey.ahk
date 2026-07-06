@@ -3,7 +3,7 @@
 SendMode("Input")
 
 ; Configuration: Set this to your online hosted URL (e.g. "https://your-app.onrender.com") when deploying.
-global API_URL := "http://127.0.0.1:8765"
+global API_URL := "https://quran-hadith-lookup-shortcuts.onrender.com"
 
 ; Automatically ensure the Flask server is running when this script starts.
 EnsureServerRunning()
