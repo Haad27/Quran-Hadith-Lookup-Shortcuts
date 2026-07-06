@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Quran & Hadith Lookup Shortcuts",
+  "version": "1.0",
+  "description": "Instantly insert Quranic verses, Hadith texts, and Islamic phrases as you type.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Quran & Hadith Shortcuts"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["quran.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
