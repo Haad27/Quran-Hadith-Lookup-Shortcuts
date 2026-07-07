@@ -31,6 +31,8 @@ ih := InputHook("V I1", ";")
 ::mus::Sahih Muslim
 ::abd::Sunan Abi Dawud
 ::tir::Jami' at-Tirmidhi
+::nas::Sunan an-Nasa'i
+::ibn::Sunan Ibn Majah
 
 ; ------------------------------------------------------------------------------
 ; Quran & Hadith Lookup Loop

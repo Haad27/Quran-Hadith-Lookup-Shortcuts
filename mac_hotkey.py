@@ -31,6 +31,8 @@ HOTSTRINGS = {
     "mus": "Sahih Muslim",
     "abd": "Sunan Abi Dawud",
     "tir": "Jami' at-Tirmidhi",
+    "nas": "Sunan an-Nasa'i",
+    "ibn": "Sunan Ibn Majah",
 }
 
 def normalize_book(abbr):

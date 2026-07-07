@@ -23,6 +23,8 @@ Instead of opening websites, searching online, or copying and pasting references
 | `mus` + space | Sahih Muslim |
 | `abd` + space | Sunan Abi Dawud |
 | `tir` + space | Jami' at-Tirmidhi |
+| `nas` + space | Sunan an-Nasa'i |
+| `ibn` + space | Sunan Ibn Majah |
 
 The application works in every Windows application, including:
 

@@ -55,3 +55,5 @@ Type these short triggers to expand into the full book titles:
 | `mus` | `Sahih Muslim` |
 | `abd` | `Sunan Abi Dawud` |
 | `tir` | `Jami' at-Tirmidhi` |
+| `nas` | `Sunan an-Nasa'i` |
+| `ibn` | `Sunan Ibn Majah` |
