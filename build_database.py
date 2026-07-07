@@ -117,8 +117,12 @@ def build_database():
             for h in ara_data.get("hadiths", []):
                 num = h.get("hadithnumber")
                 if num is not None:
+                    if book == "muslim":
+                        if num < 93:
+                            continue
+                        num -= 92
                     hadith_map[num] = {
-                        "arabic": h.get("text", ""),
+                        "arabic": h.get("text", "").strip(),
                         "english": ""
                     }
             
@@ -126,16 +130,23 @@ def build_database():
             for h in eng_data.get("hadiths", []):
                 num = h.get("hadithnumber")
                 if num is not None:
+                    if book == "muslim":
+                        if num < 93:
+                            continue
+                        num -= 92
                     if num in hadith_map:
-                        hadith_map[num]["english"] = h.get("text", "")
+                        hadith_map[num]["english"] = h.get("text", "").strip()
                     else:
                         hadith_map[num] = {
                             "arabic": "",
-                            "english": h.get("text", "")
+                            "english": h.get("text", "").strip()
                         }
             
             print(f"Inserting {len(hadith_map)} hadiths for {book} into SQLite...")
+            cursor.execute("DELETE FROM hadith WHERE book = ?", (book,))
             for num, texts in hadith_map.items():
+                if not texts["arabic"] and not texts["english"]:
+                    continue
                 cursor.execute("""
                     INSERT OR REPLACE INTO hadith (book, hadith_number, arabic, english)
                     VALUES (?, ?, ?, ?)
