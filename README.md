@@ -24,7 +24,7 @@ Instead of opening websites, searching online, or copying and pasting references
 | `abd` + space | Sunan Abi Dawud |
 | `tir` + space | Jami' at-Tirmidhi |
 
-The application works in almost every Windows application, including:
+The application works in every Windows application, including:
 
 * Google Chrome
 * Microsoft Edge
@@ -34,7 +34,7 @@ The application works in almost every Windows application, including:
 * WhatsApp Desktop
 * Notepad
 * Visual Studio Code
-* And most other applications that accept keyboard input.
+* And all applications that accept keyboard input.
 
 ---
 
@@ -58,36 +58,5 @@ The application works in almost every Windows application, including:
 
 ---
 
-## Running the Project
-
-1. Install the Python dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Start the Flask server:
-
-```bash
-python server.py
-```
-
-3. Run `hotkey.ahk`.
-
-The shortcut system is now active across Windows.
-
----
-
-## Future Plans
-
-* More Hadith collections
-* Multiple Qur'an translations
-* Tafsīr support
-* Offline mode
-* Android & iOS apps
-* Browser extension
-* AI-powered Islamic search
-
----
 
 May Allah ﷻ accept this effort and make it beneficial for everyone. Āmīn.

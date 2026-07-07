@@ -44,12 +44,6 @@ def lookup():
         if not row:
             return "Verse not found.", 404
 
-        # Format:
-        # Surah Al-Baqarah (2:285)
-        #
-        # Arabic text
-        #
-        # English text
         formatted = (
             f"Surah {row['surah_name']} ({row['reference']})\n\n"
             f"{row['arabic']}\n\n"
@@ -58,7 +52,6 @@ def lookup():
         return formatted, 200
 
     else:
-        # It's a Hadith book
         try:
             hadith_num = int(query)
         except ValueError:
@@ -75,7 +68,6 @@ def lookup():
         if not row:
             return f"Hadith {hadith_num} not found in {book.capitalize()}.", 404
 
-        # Get readable book name
         book_names = {
             "bukhari": "Sahih al-Bukhari",
             "muslim": "Sahih Muslim",

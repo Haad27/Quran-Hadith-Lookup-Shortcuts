@@ -4,7 +4,7 @@ Quickly insert Quranic verses, Hadith texts, and common Islamic phrases as you t
 
 ---
 
-## 🕌 1. Quran Lookup
+1. Quran Lookup
 Type any Surah and Ayah reference followed by a semicolon (`;`) to fetch the verse instantly.
 
 * **Format:** `Surah:Ayah;`
@@ -13,7 +13,7 @@ Type any Surah and Ayah reference followed by a semicolon (`;`) to fetch the ver
 
 ---
 
-## 📚 2. Hadith Lookup
+2. Hadith Lookup
 Type the book code and Hadith number followed by a semicolon (`;`).
 
 * **Format:** `[BookCode][Number];`
@@ -29,7 +29,7 @@ Type the book code and Hadith number followed by a semicolon (`;`).
 
 ---
 
-## ✨ 3. Islamic Phrase Expansions
+3. Islamic Phrase Expansions
 Type any of these short triggers followed by a **Space**, **Tab**, or **Enter** key to expand them:
 
 | Type | To Get |
@@ -46,7 +46,7 @@ Type any of these short triggers followed by a **Space**, **Tab**, or **Enter** 
 
 ---
 
-## 📖 4. Hadith Book Title Expansions
+4. Hadith Book Title Expansions
 Type these short triggers to expand into the full book titles:
 
 | Type | To Get |
