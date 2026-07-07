@@ -23,12 +23,18 @@
                 <h1 class="title">Look up the Quran & Hadith <span class="highlight" style="color: rgb(85, 182, 85);">Instantly</span></h1>
                 <p class="subtitle">Type a short reference anywhere on your desktop and instantly replace it with the beautiful Arabic text and English translation. No more switching tabs.</p>
                 
-                <div class="actions">
+                <div class="actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <a href="/download" class="btn btn-primary" id="downloadBtn">
                         <span class="btn-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         </span>
                         Download for Windows
+                    </a>
+                    <a href="/download-mac" class="btn btn-primary" id="downloadMacBtn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </span>
+                        Download for Mac
                     </a>
                 </div>
             </div>
@@ -179,12 +185,24 @@
     <script>
         // Simple micro-animation on download click
         const downloadBtn = document.getElementById('downloadBtn');
-        downloadBtn.addEventListener('click', function(e) {
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
-        });
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        }
+        
+        const downloadMacBtn = document.getElementById('downloadMacBtn');
+        if (downloadMacBtn) {
+            downloadMacBtn.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        }
     </script>
 </body>
 </html>

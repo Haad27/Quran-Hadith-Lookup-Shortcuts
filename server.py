@@ -18,6 +18,10 @@ def index():
 def download_exe():
     return send_from_directory("downloads", "IslamicShortcuts.exe", as_attachment=True)
 
+@app.route("/download-mac")
+def download_mac():
+    return send_from_directory("downloads", "IslamicShortcuts-Mac.zip", as_attachment=True)
+
 @app.route("/ping")
 def ping():
     return jsonify({"status": "ok"}), 200
