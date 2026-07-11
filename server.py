@@ -16,7 +16,7 @@ def index():
 
 @app.route("/download")
 def download_exe():
-    return send_from_directory("downloads", "IslamicShortcuts.exe", as_attachment=True)
+    return send_from_directory("downloads", "DeenKeys.exe", as_attachment=True)
 
 @app.route("/download-mac")
 def download_mac():
