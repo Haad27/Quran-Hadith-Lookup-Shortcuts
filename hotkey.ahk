@@ -8,6 +8,9 @@ global API_URL := "https://quran-hadith-lookup-shortcuts.onrender.com"
 ; Automatically ensure the Flask server is running when this script starts.
 EnsureServerRunning()
 
+; Show the Welcome GUI every time the application is started
+ShowWelcomeGUI()
+
 ; Initialize the InputHook.
 ; - "V" makes input visible (so what the user types is typed in the active window).
 ; - "I1" prevents the script's own generated keystrokes (like pastes) from re-triggering the hook.
@@ -154,4 +157,34 @@ EnsureServerRunning() {
 {
     global ih
     ih.Stop()
+}
+
+ShowWelcomeGUI() {
+    WelcomeGui := Gui("-MaximizeBox -MinimizeBox", "DeenKeys - Welcome")
+    
+    WelcomeGui.SetFont("s12 bold", "Segoe UI")
+    WelcomeGui.Add("Text", "w550", "✅ DeenKeys has started and is running in the background!")
+    
+    WelcomeGui.SetFont("s10 norm", "Segoe UI")
+    WelcomeGui.Add("Text", "w550 y+10", "You can now type your shortcuts anywhere (Word, Chrome, WhatsApp, etc.) and they will automatically expand.")
+    
+    WelcomeGui.SetFont("s10 bold")
+    WelcomeGui.Add("Text", "w550 y+15", "Important Notes:")
+    
+    WelcomeGui.SetFont("s10 norm")
+    WelcomeGui.Add("Text", "w550 y+5", "• You can safely close this window; the app will keep running silently.`n• If you turn off or restart your laptop, you will need to double-click the app to start it again.`n• To stop the app completely while it's running, open Task Manager and end the 'DeenKeys' task.")
+    
+    WelcomeGui.Add("Text", "w550 y+15", "-------------------------------------------------------------------------------------------------------")
+    
+    WelcomeGui.SetFont("s11 bold")
+    WelcomeGui.Add("Text", "w550 y+15", "📖 Quick Cheat Sheet:")
+    
+    WelcomeGui.SetFont("s10 norm")
+    WelcomeGui.Add("Text", "w550 y+10", "1. Quran: Type Surah:Ayah; (e.g., 33:23;)")
+    WelcomeGui.Add("Text", "w550 y+5", "2. Hadith: Type BookCodeNumber; (e.g., b102; or m45;)`n    Codes: b (Bukhari), m (Muslim), ad (Abu Dawud), t (Tirmidhi), n (Nasai), im (Ibn Majah)")
+    WelcomeGui.Add("Text", "w550 y+5", "3. Phrases (type and press Space/Enter):`n    ALLAH -> ALLAH ﷻ`n    love; -> Prophet Muhammad ﷺ`n    aoa -> Assalamu Alaikum`n    jaz -> JazakAllahu Khayran")
+    
+    WelcomeGui.Add("Button", "w100 x225 y+20 Default", "Got it!").OnEvent("Click", (*) => WelcomeGui.Destroy())
+    
+    WelcomeGui.Show()
 }
